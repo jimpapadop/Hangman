@@ -52,7 +52,7 @@ while lives != 0:
  else:
   if letter_given in listlettersgiven:
      print("--You have already given this letter,choose another one--")
-  else:                                         #if letter given is correct it goas here
+  else:                                         #if letter given is correct it goes here
     listlettersgiven.insert(0,letter_given)
     if letter_given in listw :
         print("correct guess")
@@ -66,7 +66,7 @@ while lives != 0:
                 sys.exit()
 
 
-    else :                                        #if letter given is wrong it goas here
+    else :                                        #if letter given is wrong it goes here
         listlettersgiven.insert(0, letter_given)
         lives-=1
         if lives !=1 :
