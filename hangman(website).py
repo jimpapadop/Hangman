@@ -34,6 +34,8 @@ while c1 != len(word):   #create list with "--"
  listp.insert( c1 ,"-" )
  c1 += 1
 
+listring = ''.join(map(str, listp))
+print(listring)    
 
 while lives != 0:
  letter_given = input("give a guess:")
@@ -56,10 +58,11 @@ while lives != 0:
           if listw[c3] == letter_given:
             listp[c3] = letter_given
             listring = ''.join(map(str, listp))
-            print(listring)
             if listw== listp:
+                print(listring)
                 print("\033[01;46m""You Found It")
                 sys.exit()
+        print(listring)
 
 
     else :                                        #if letter given is wrong it goas here
