@@ -33,18 +33,6 @@ while c4 != 0: #this is used in order to hide the word from the player 2
 print("Your goal is to find the hidden word")
 print("You have 6 lives")
 
-
-import sys
-
-word = input("enter a word:")
-listw = [] #this list is filled with the letters of the word
-listp = [] #this list is filled with len(word)*-
-listlettersgiven = [] #in this list are inserted all the letters given
-c2 = 0
-c1 = 0
-c4 = 20
-lives = 6
-
 while c1 != len(word):   #create list with "--"
  listp.insert( c1 ,"-" )
  c1 += 1
