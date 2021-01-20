@@ -34,10 +34,23 @@ print("Your goal is to find the hidden word")
 print("You have 6 lives")
 
 
+import sys
+
+word = input("enter a word:")
+listw = [] #this list is filled with the letters of the word
+listp = [] #this list is filled with len(word)*-
+listlettersgiven = [] #in this list are inserted all the letters given
+c2 = 0
+c1 = 0
+c4 = 20
+lives = 6
+
 while c1 != len(word):   #create list with "--"
  listp.insert( c1 ,"-" )
  c1 += 1
 
+listring = ''.join(map(str, listp))
+print(listring)
 
 while lives != 0:
  letter_given = input("give a guess:")
@@ -60,10 +73,11 @@ while lives != 0:
           if listw[c3] == letter_given:
             listp[c3] = letter_given
             listring = ''.join(map(str, listp))
-            print(listring)
-            if listw== listp:
+            if listw == listp:
+                print(listring)
                 print("\033[01;46m""You Found It")
                 sys.exit()
+        print(listring)
 
 
     else :                                        #if letter given is wrong it goes here
@@ -79,6 +93,15 @@ while lives != 0:
 
 if lives == 0:
     print("\033[01;41m""Better luck next time")
+
+
+
+
+
+
+
+
+
 
 
 
